@@ -118,10 +118,11 @@ export default function SignInSide() {
                                 id="password"
                                 autoComplete="current-password"
                             />
-                            <FormControlLabel
+                            {/* <FormControlLabel
                                 control={<Checkbox value="remember" color="primary" />}
                                 label="Remember me"
-                            />
+                            /> */}
+                            {error && <div style={{color: 'red'}}>{error}</div>}
                             <Button
                                 type="submit"
                                 fullWidth
