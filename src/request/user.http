@@ -1,0 +1,14 @@
+@api = https://eat-ser.vercel.app/
+@apiLocal = http://localhost:3000
+
+
+###
+POST {{apiLocal}}/api/auth/register
+Content-type: application/json
+
+ {
+    "name": "luciano",
+    "lastname": "mastrangelo",
+    "email": "test@eat.ser.com",
+    "password": "test"
+ }

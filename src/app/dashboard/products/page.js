@@ -19,9 +19,9 @@ function HomePage() {
             body: formData,
           });
 
-          //const data = await response.json();
-          return console.log("response",response)
-          console.log(data);
+          const data = await response.json();
+          // return console.log("response",response)
+          // console.log(data);
           setImageUrl(data.url)
         }}
       >

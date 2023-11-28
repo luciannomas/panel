@@ -1,0 +1,35 @@
+@api = https://eat-ser.vercel.app
+@apiLocal = http://localhost:3000
+
+### 
+GET {{apiLocal}}/api/hello
+
+###
+GET {{apiLocal}}/api/categories
+
+###
+GET {{apiLocal}}/api/categorias/632e59669b026568ad8abbce
+
+###
+POST {{apiLocal}}/api/categories
+Content-type: application/json
+
+ {
+    "title":"galletas"
+ }
+
+
+###
+
+PUT {{apiLocal}}/api/categorias/632e5af09b026568ad8abbe6
+Content-type: application/json
+
+ {
+    "title":"donaas"
+ }
+
+
+
+###
+DELETE https://zafirus-c.herokuapp.com/users/62c2249fe35b235a0161368b
+

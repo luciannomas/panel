@@ -1,0 +1,34 @@
+@api = https://eat-ser.vercel.app/
+@apiLocal = http://localhost:3000
+
+
+###
+GET {{apiLocal}}/api/products
+
+###
+POST {{apiLocal}}/api/products
+Content-type: application/json
+
+ {
+    "name": "hamburguesa doble",
+    "price": 569,
+    "image": "5",
+    "categoryId": "1"
+ }
+
+
+###
+PUT {{apiLocal}}/api/products/65663078094089a6d12514e0 
+Content-type: application/json
+
+ {
+    "name": "hamburguesas simple",
+    "price": 97,
+    "image": "3",
+    "categoryId": "2"
+ }
+
+
+###
+DELETE {{apiLocal}}/api/products/65663078094089a6d12514e0
+
