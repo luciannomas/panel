@@ -9,23 +9,25 @@ import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import { useRouter } from "next/navigation";
+
 
 export const mainListItems = (
   <React.Fragment>
-    <ListItemButton>
+    <ListItemButton  onClick={ ()=> { router.push("/")} } >
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton onClick={ ()=> { console.log("2")} }>
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
       <ListItemText primary="Orders" />
     </ListItemButton>
     <ListItemButton>
-      <ListItemIcon>
+      <ListItemIcon onClick={console.log("ok")}>
         <PeopleIcon />
       </ListItemIcon>
       <ListItemText primary="Customers" />

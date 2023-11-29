@@ -39,7 +39,7 @@ export default function SignInSide() {
     const { data: session, status } = useSession();
 
     if (session) {
-        return router.push('/dashboard/profile');
+        return router.push('/dashboard');
     }
 
     const handleSubmit = async (event) => {
@@ -59,7 +59,7 @@ export default function SignInSide() {
 
         if (res?.error) setError(res.error);
 
-        if (res?.ok) return router.push("/dashboard/profile");
+        if (res?.ok) return router.push("/dashboard");
 
     };
 

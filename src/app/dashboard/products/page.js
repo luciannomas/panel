@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
+import BasicLayout from '../../../layouts/DashLayout/page'
 
 function HomePage() {
   const [file, setFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
 
   return (
-    <div>
+    <BasicLayout>
       <form
         onSubmit={async (e) => {
           e.preventDefault();
@@ -38,7 +39,7 @@ function HomePage() {
           <img src={imageUrl} alt="" />
         )
       }
-    </div>
+    </BasicLayout>
   );
 }
 
