@@ -61,7 +61,7 @@ const Page = () => {
           </Typography>
           <Button
             component={NextLink}
-            href="/Dashboard"
+            href="/dashboard"
             
             sx={{ mt: 3 }}
             variant="contained"
