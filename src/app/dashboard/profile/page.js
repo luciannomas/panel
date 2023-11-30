@@ -1,36 +1,60 @@
 "use client";
-import { useSession, signOut } from "next-auth/react";
+import { useState } from "react";
+import BasicLayout from '../../../layouts/DashLayout/page'
+import { Box, Container, Stack, Typography, Unstable_Grid2 as Grid } from '@mui/material';
+import { AccountProfile } from '../../sections/account/account-profile';
+import { AccountProfileDetails } from '../..//sections/account/account-profile-details';
+import 'simplebar-react/dist/simplebar.min.css';
+import { ThemeProvider } from '@mui/material/styles';
+import { createTheme } from '../../theme/index';
 
-function ProfilePage() {
-  const { data: session, status } = useSession();
-
-  console.log(session, status);
-
+function Categories() {
+  const theme = createTheme();
   return (
-    <div className="h-[calc(100vh-4rem)] flex flex-col gap-y-10 items-center justify-center">
-      <h1 className="font-bold text-3xl">Profile</h1>
+    <BasicLayout>
+      <ThemeProvider theme={theme}>
+        <Box
+          component="main"
+          sx={{
+            flexGrow: 1,
+            py: 8
+          }}
+        >
+          <Container maxWidth="lg">
+            <Stack spacing={3}>
+              <div>
+                <Typography variant="h4">
+                  Account
+                </Typography>
+              </div>
+              <div>
+                <Grid
+                  container
+                  spacing={3}
+                >
+                  <Grid
+                    xs={12}
+                    md={6}
+                    lg={4}
+                  >
+                    <AccountProfile />
+                  </Grid>
+                  <Grid
+                    xs={12}
+                    md={6}
+                    lg={8}
+                  >
+                    <AccountProfileDetails />
+                  </Grid>
+                </Grid>
+              </div>
+            </Stack>
+          </Container>
+        </Box>
+      </ThemeProvider>
 
-      <pre className="bg-zinc-800 p-4">
-        {JSON.stringify(
-          {
-            session,
-            status,
-          },
-          null,
-          2
-        )}
-      </pre>
-
-      <button
-        className="bg-zinc-800 px-4 py-2 block mb-2"
-        onClick={() => {
-          signOut();
-        }}
-      >
-        Signout
-      </button>
-    </div>
+    </BasicLayout>
   );
 }
 
-export default ProfilePage;
+export default Categories;
