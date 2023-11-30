@@ -1,6 +1,7 @@
 import TaskCard from "@/components/TaskCard";
 import Task from "@/models/Task";
 import { connectDB } from '@/libs/mongodb';
+import Cooming from './cooming'
 
 export async function loadTasks() {
   await connectDB();
@@ -13,9 +14,10 @@ export default async function HomePage() {
 
   return (
     <div className="grid md:grid-cols-3 gap-2">
-      {tasks.map((task) => (
+      {/* {tasks.map((task) => (
         <TaskCard task={task} key={task._id} />
-      ))}
+      ))} */}
+      <Cooming/>
     </div>
   );
 }
