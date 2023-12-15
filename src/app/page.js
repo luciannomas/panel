@@ -21,12 +21,9 @@ export default async function HomePage() {
       {/* {tasks.map((task) => (
         <TaskCard task={task} key={task._id} />
       ))} */}
-      {/* <Navbar/>
       
-      */}
       <HomeLayout>
-        {/* <ProductsView />  */}
-        
+        <ProductsView /> 
       </HomeLayout>
       
     </>
